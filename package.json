@@ -1,0 +1,33 @@
+{
+  "name": "demo6",
+  "version": "1.0.0",
+  "description": "demo6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-alpha.36",
+      "es6-shim": "github:es-shims/es6-shim@^0.33.3",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.1",
+      "ts": "github:frankwallis/plugin-typescript@^2.0.1",
+      "zone.js": "npm:zone.js@^0.5.4"
+    },
+    "devDependencies": {
+      "traceur": "github:jmcriffey/bower-traceur@0.0.90",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.90",
+      "typescript": "github:mhegazy/typescript@v1.5-beta2"
+    }
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.3",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-jspm": "^2.0.1-beta.1"
+  }
+}
