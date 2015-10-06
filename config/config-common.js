@@ -1,23 +1,27 @@
 
 var BASE_CONFING = {
-	"baseURL": "/",
 	"defaultJSExtensions": true,
 	"transpiler": "typescript",
 	"paths": {
-		"client": "src/client",
-		"server": "src/server",
-		"common": "src/common",
-		"tests": "tests",
 		"github:*": "jspm_packages/github/*",
 		"npm:*": "jspm_packages/npm/*"
 	},
+	"map": {
+		"client/angular2-app": "src/client/angular2-app",			
+		"client/angular-app": "src/client/angular-app",			
+		"common": "src/common",
+		"server": "src/server"
+	},
 	"packages": {
-		"client": {
-			"main": "app",
-			"defaultExtension": "ts"
+		"client/angular2-app": {
+			"defaultExtension": "ts",
+			"main": "app.ts"
+		},
+		"client/angular-app": {
+			"defaultExtension": "ts",
+			"main": "app.ts"
 		},
 		"common": {
-			"main": "facade/intl",
 			"defaultExtension": "ts"
 		},
 		"server": {

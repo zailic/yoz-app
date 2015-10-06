@@ -3,5 +3,9 @@
 		"target": "ES5",
 		"module": "commonjs",		
 		"experimentalDecorators": true
-	}
+	},
+	"exclude": [
+		"node_modules",
+		"jsp_packages"
+	]
 }

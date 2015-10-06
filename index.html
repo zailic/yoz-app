@@ -7,10 +7,12 @@
     <script src="config/config-client.js"></script>
     <script src="config.js"></script>
   </head>
-  <body>
-    <content></content>
+  <body ng-app="App">
+    <div class="container-app" ng-controller="BaseCtrl">
+      <h1>{{ helloMsg }}</h1>
+    </div>
     <script>
-      System.import("client");
+      System.import("client/angular-app");
     </script>
   </body>
 </html>

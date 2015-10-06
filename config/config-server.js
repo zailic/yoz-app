@@ -1,0 +1,4 @@
+var SERVER_CONFING = {
+	"baseURL" : APPLICATION_ROOT_DIR
+};
+System.config(mergeConfigs(BASE_CONFING,SERVER_CONFING));

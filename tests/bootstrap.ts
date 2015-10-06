@@ -1,6 +1,6 @@
-import {main as mainIntl} from "tests/common/facade/intl" 
+// import ... 
 function bootstrap () {
-	mainIntl();
+	// boot your tests here...
 }
 
 bootstrap();
