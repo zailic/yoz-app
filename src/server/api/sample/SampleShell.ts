@@ -1,4 +1,4 @@
-import {SampleController} from './sample-controller';
+import {SampleController} from './SampleController';
 export function sampleApi(app) {
   var ctrl = new SampleController();
   var apiUrl = '/api/sample';

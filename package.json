@@ -20,14 +20,18 @@
       "mongodb": "npm:mongodb@^2.0.45"
     },
     "devDependencies": {
-      "typescript": "github:mhegazy/typescript@v1.5-beta2"
+      "typescript": "npm:typescript@^1.6.2"
     }
   },
   "devDependencies": {
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.3",
     "karma-chrome-launcher": "^0.2.0",
-    "karma-jasmine": "^0.3.6",
-    "karma-jspm": "^2.0.1-beta.1"
+    "karma-jasmine": "^0.3.6"
+  },
+  "dependencies": {
+    "systemjs": "^0.19.3",
+    "typescript": "^1.6.2",
+    "process": "^0.11.2"
   }
 }

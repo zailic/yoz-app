@@ -1,6 +1,8 @@
-import {BaseController} from "../base-controller";
+import {BaseController} from "../BaseController";
 //import {MongoClient} from "mongodb";
+import {ApiResponseInterface} from "common/ApiResponseInterface";
 import {assert} from "assert";
+import {IsNaNException} from "common/IsNaNException";
 
 export class SampleController extends BaseController {
 
@@ -16,11 +18,15 @@ export class SampleController extends BaseController {
         console.log("Connected correctly to server");
         db.close();
       });*/
+      var r:ApiResponseInterface = {
+        "success": true,
+        "data": {
+          "bookingId": 1,
+          "amount": 100.90
+        }
+      };
 
-      res.json({
-        hello: 'world',
-        users: ['Alice', 'Bob', 'Carol']
-      });
+      res.json(r);
     })
   }
 

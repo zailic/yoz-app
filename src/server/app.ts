@@ -1,7 +1,7 @@
 import express from "express";
 import {Server, createServer} from "http";
 //import bodyParser from "body-parser";
-import {sampleApi} from "server/api/sample/sample-shell";
+import {sampleApi} from "server/api/sample/SampleShell";
 
 export class App {
 	
