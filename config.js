@@ -10,20 +10,34 @@ System.config({
 System.config({
   "map": {
     "angular": "npm:angular@1.4.7",
-    "angular2": "npm:angular2@2.0.0-alpha.38",
+    "angular-material": "github:angular/bower-material@0.11.4",
+    "angular2": "npm:angular2@2.0.0-alpha.44",
     "assert": "npm:assert@1.3.0",
+    "css": "github:systemjs/plugin-css@0.1.19",
     "express": "npm:express@4.13.3",
     "http": "github:jspm/nodelibs-http@1.7.1",
     "kerberos": "npm:kerberos@0.0.15",
-    "mongodb": "npm:mongodb@2.0.45",
+    "mongodb": "npm:mongodb@2.0.46",
     "traceur": "github:jmcriffey/bower-traceur@0.0.90",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.90",
     "typescript": "github:mhegazy/typescript@v1.5-beta2",
+    "github:angular/bower-angular-animate@1.4.7": {
+      "angular": "github:angular/bower-angular@1.4.7"
+    },
+    "github:angular/bower-angular-aria@1.4.7": {
+      "angular": "github:angular/bower-angular@1.4.7"
+    },
+    "github:angular/bower-material@0.11.4": {
+      "angular": "github:angular/bower-angular@1.4.7",
+      "angular-animate": "github:angular/bower-angular-animate@1.4.7",
+      "angular-aria": "github:angular/bower-angular-aria@1.4.7",
+      "css": "github:systemjs/plugin-css@0.1.19"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
-      "buffer": "npm:buffer@3.5.0"
+      "buffer": "npm:buffer@3.5.1"
     },
     "github:jspm/nodelibs-constants@0.1.0": {
       "constants-browserify": "npm:constants-browserify@0.0.1"
@@ -82,19 +96,24 @@ System.config({
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
+    "npm:@reactivex/rxjs@5.0.0-alpha.4": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:accepts@1.2.13": {
       "mime-types": "npm:mime-types@2.1.7",
       "negotiator": "npm:negotiator@0.5.3"
     },
-    "npm:angular2@2.0.0-alpha.38": {
+    "npm:angular2@2.0.0-alpha.44": {
+      "@reactivex/rxjs": "npm:@reactivex/rxjs@5.0.0-alpha.4",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
-      "reflect-metadata": "npm:reflect-metadata@0.1.2",
-      "rx": "npm:rx@2.5.1",
-      "zone.js": "npm:zone.js@0.5.7"
+      "reflect-metadata": "npm:reflect-metadata@0.1.1",
+      "zone.js": "npm:zone.js@0.5.8"
     },
     "npm:angular@1.4.7": {
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -113,7 +132,7 @@ System.config({
     "npm:browserify-aes@1.0.5": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "buffer-xor": "npm:buffer-xor@1.0.3",
-      "cipher-base": "npm:cipher-base@1.0.1",
+      "cipher-base": "npm:cipher-base@1.0.2",
       "create-hash": "npm:create-hash@1.1.2",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "evp_bytestokey": "npm:evp_bytestokey@1.0.0",
@@ -130,7 +149,7 @@ System.config({
     },
     "npm:browserify-des@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "cipher-base": "npm:cipher-base@1.0.1",
+      "cipher-base": "npm:cipher-base@1.0.2",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "des.js": "npm:des.js@1.0.0",
       "inherits": "npm:inherits@2.0.1"
@@ -154,7 +173,7 @@ System.config({
       "parse-asn1": "npm:parse-asn1@3.0.2",
       "stream": "github:jspm/nodelibs-stream@0.1.0"
     },
-    "npm:bson@0.4.12": {
+    "npm:bson@0.4.19": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "github:jspm/nodelibs-util@0.1.0"
@@ -163,12 +182,12 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:buffer@3.5.0": {
+    "npm:buffer@3.5.1": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
     },
-    "npm:cipher-base@1.0.1": {
+    "npm:cipher-base@1.0.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "inherits": "npm:inherits@2.0.1",
       "stream": "github:jspm/nodelibs-stream@0.1.0",
@@ -195,7 +214,7 @@ System.config({
     },
     "npm:create-hash@1.1.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "cipher-base": "npm:cipher-base@1.0.1",
+      "cipher-base": "npm:cipher-base@1.0.2",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "inherits": "npm:inherits@2.0.1",
@@ -355,8 +374,8 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:mongodb-core@1.2.14": {
-      "bson": "npm:bson@0.4.12",
+    "npm:mongodb-core@1.2.19": {
+      "bson": "npm:bson@0.4.19",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "events": "github:jspm/nodelibs-events@0.1.1",
@@ -367,14 +386,14 @@ System.config({
       "tls": "github:jspm/nodelibs-tls@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:mongodb@2.0.45": {
+    "npm:mongodb@2.0.46": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "es6-promise": "npm:es6-promise@2.1.1",
       "events": "github:jspm/nodelibs-events@0.1.1",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "mongodb-core": "npm:mongodb-core@1.2.14",
+      "mongodb-core": "npm:mongodb-core@1.2.19",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "readable-stream": "npm:readable-stream@1.0.31",
       "stream": "github:jspm/nodelibs-stream@0.1.0",
@@ -449,15 +468,12 @@ System.config({
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "string_decoder": "npm:string_decoder@0.10.31"
     },
-    "npm:reflect-metadata@0.1.2": {
+    "npm:reflect-metadata@0.1.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:ripemd160@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:rx@2.5.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:send@0.13.0": {
@@ -524,7 +540,7 @@ System.config({
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
     },
-    "npm:zone.js@0.5.7": {
+    "npm:zone.js@0.5.8": {
       "es6-promise": "npm:es6-promise@3.0.2",
       "process": "github:jspm/nodelibs-process@0.1.2"
     }

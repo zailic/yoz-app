@@ -1,18 +1,44 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en" >
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <title>Angular Material - Starter App</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
+
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+  </head>
+
+  <body ng-cloak layout="column">
+
+
+    <div ng-include="'src/client/angular-app/user/views/browseUsers.html'"
+         layout="column" flex tabIndex="-1" role="main" >
+    </div>
+
+
     <script src="jspm_packages/system.js"></script>
     <script src="config/tools.js"></script>
     <script src="config/config-common.js"></script>
     <script src="config/config-client.js"></script>
     <script src="config.js"></script>
-  </head>
-  <body ng-app="App">
-    <div class="container-app" ng-controller="BaseCtrl">
-      <h1>{{ helloMsg }}</h1>
-    </div>
-    <script>
-      System.import("client/angular-app");
+    
+    <script type="text/javascript">
+      System
+        .import("client/angular-app")
+        .catch( console.error.bind(console) ); // make sure any errors print to console
     </script>
+
   </body>
 </html>
+

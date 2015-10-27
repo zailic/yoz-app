@@ -6,6 +6,6 @@
 	},
 	"exclude": [
 		"node_modules",
-		"jsp_packages"
+		"jspm_packages"
 	]
 }
