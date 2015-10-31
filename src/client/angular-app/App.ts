@@ -1,12 +1,12 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts" />
 /// <reference path="../../../typings/angular-material/angular-material.d.ts" />
 
-import 'angular-material/angular-material.css!';
+import "angular-app-assets/app.css!";
 import {module} from "angular";
 import material from "angular-material";
 import {versionComponentPromise} from "./core/version/version";
 import {userComponentPromise} from "./user/user";
 import {MainController} from "./core/MainController";
-export var App = module("App",[versionComponentPromise.fqnName, userComponentPromise.fqnName]);
-console.log(material);
+let APP_NAME="angular-app";
+export var App = module(APP_NAME,[material, versionComponentPromise.fqnName, userComponentPromise.fqnName]);
 App.controller("MainCtrl", MainController);

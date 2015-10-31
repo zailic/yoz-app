@@ -15,6 +15,6 @@ export var userComponentPromise = ComponentService.registerComponent(() => {
 	module(COMPONENT_FQN, [])
 		.service(USER_SERVICE, UserService.Factory)
 		.controller(BROWSE_USER_CONTROLLER_FQN, BrowseUsersController)
-		.config(["$mdIconProvider", UserModuleConfiguration.Factory]);	
+		.config(UserModuleConfiguration.Factory);	
 	return new ComponentRegisterPromise(COMPONENT_FQN);
 });

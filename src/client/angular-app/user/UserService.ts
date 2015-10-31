@@ -33,8 +33,8 @@ export class UserService {
 	];
 	
 	public static Factory ($q:any,$log:any) {
-		$log = $log.getInstance( "UsersDataservice" );
-		$log.debug( "instanceOf() ");	
+		$log = $log.getInstance( "UserService" );
+		$log.debug("instanceOf()");	
 		return {
 			loadAll: () => {
 				$log.debug("loadAll()");

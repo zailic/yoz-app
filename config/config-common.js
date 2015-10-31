@@ -19,7 +19,7 @@ var BASE_CONFING = {
 		},
 		"client/angular-app": {
 			"defaultExtension": "ts",
-			"main": "App.ts"
+			"main": "bootstrap.ts"
 		},
 		"common": {
 			"defaultExtension": "ts"
