@@ -1,5 +1,7 @@
+import {IUser} from "./IUser";
+
 export class UserService {
-	public static users = [
+	public static users:IUser[] = [
 		{
 			name: 'Lia Lugo',
 			avatar: 'svg-1',
@@ -32,12 +34,12 @@ export class UserService {
 		}
 	];
 	
-	public static Factory ($q:any,$log:any) {
-		$log = $log.getInstance( "UserService" );
-		$log.debug("instanceOf()");	
+	public static Factory ($q:any, $log:any) {
+		let log = $log.getInstance( "UserService" );
+		log.debug("instanceOf()");	
 		return {
 			loadAll: () => {
-				$log.debug("loadAll()");
+				log.debug("loadAll()");
 				// Simulate async nature of real remote calls
 				return $q.when(UserService.users);
 			}

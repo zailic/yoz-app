@@ -5,7 +5,7 @@ import { LogDecorator, ExternalLogger } from './misc/LogDecorator';
 element(document).ready(initApp);
 
 function initApp() {
-	let $log = new ExternalLogger();
+	let $log = ExternalLogger();
 	$log = $log.getInstance("BOOTSTRAP");
 	$log.debug("Initializing '{0}'", [App.name]); 
 	let body = document.getElementsByTagName("body")[0];

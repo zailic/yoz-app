@@ -4,11 +4,12 @@ export class Configuration {
 	public static URL_ICON_MENU:string = '/assets/angular-app/svg/menu.svg'; 
 	public static URL_ICON_SHARE:string = '/assets/angular-app/svg/share.svg'; 
 
-	public static Factory ($mdIconProvider) {
-		let $log = new ExternalLogger();
-    	$log = $log.getInstance( "BOOTSTRAP" );
-    	$log.debug( "Configuring 'user' module" );
-		$log.debug( "Configuring $mdIconProvider" );	
+	public static apply ($mdIconProvider) {
+		let log = ExternalLogger();
+    	log = log.getInstance( "BOOTSTRAP" );
+    	log.debug( "Configuring 'user' module" );
+		
+		log.debug( "Configuring $mdIconProvider" );	
 		// Register `dashboard` iconset & icons for $mdIcon service lookups
 		$mdIconProvider
 			.defaultIconSet(Configuration.URL_AVATAR_ICONS, 128 )

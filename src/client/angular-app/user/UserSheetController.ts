@@ -1,3 +1,5 @@
+import {IUser} from "./IUser";
+import {IUserSheetItem} from "./IUserSheetItem";
 /**
 * Bottom Sheet controller for the Avatar Actions
 */
@@ -7,14 +9,18 @@ export class UserSheetController {
 	
 	public static selectedUser:any;
 	
-	public static availableItems = [
-		{ name: 'Phone'       , icon: 'phone'       , icon_url: '/assets/angular-app/svg/phone.svg'},
-		{ name: 'Twitter'     , icon: 'twitter'     , icon_url: '/assets/angular-app/svg/twitter.svg'},
-		{ name: 'Google+'     , icon: 'google_plus' , icon_url: '/assets/angular-app/svg/google_plus.svg'},
-		{ name: 'Hangout'     , icon: 'hangouts'    , icon_url: '/assets/angular-app/svg/hangouts.svg'}
+	public sheetItems:IUserSheetItem[];
+	
+	public user:IUser;
+	
+	public static availableItems:IUserSheetItem[] = [
+		{ name: 'Phone'       , icon: 'phone'       , iconUrl: '/assets/angular-app/svg/phone.svg'},
+		{ name: 'Twitter'     , icon: 'twitter'     , iconUrl: '/assets/angular-app/svg/twitter.svg'},
+		{ name: 'Google+'     , icon: 'google_plus' , iconUrl: '/assets/angular-app/svg/google_plus.svg'},
+		{ name: 'Hangout'     , icon: 'hangouts'    , iconUrl: '/assets/angular-app/svg/hangouts.svg'}
 	];
 	
-	constructor(public $mdBottomSheet:any, public $log:any) {
+	constructor(public $mdBottomSheet:any, public log:any) {
 		this.init();
 	}
 	
@@ -22,9 +28,9 @@ export class UserSheetController {
 	 * init
 	 */
 	private init() {
-		this.$log = this.$log.getInstance( "UserSheetController" );
-		this.$log.debug("instanceOf()");	
-		this.items = UserSheetController.availableItems;
+		this.log = this.log.getInstance( "UserSheetController" );
+		this.log.debug("instanceOf()");	
+		this.sheetItems = UserSheetController.availableItems;
 		this.user = UserSheetController.selectedUser;
 	}
 	
@@ -32,7 +38,7 @@ export class UserSheetController {
 	 * performAction
 	 */
 	public performAction(action:string) {
-		this.$log.debug("makeContactWith( {name} )", action);
+		this.log.debug("makeContactWith( {name} )", action);
 		this.$mdBottomSheet.hide(action);
 	}	
 	

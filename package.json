@@ -18,6 +18,7 @@
       "css": "github:systemjs/plugin-css@^0.1.19",
       "express": "npm:express@^4.13.3",
       "http": "github:jspm/nodelibs-http@^1.7.1",
+      "jade": "github:johnsoftek/plugin-jade@^0.5.1",
       "kerberos": "npm:kerberos@^0.0.15",
       "mongodb": "npm:mongodb@^2.0.45"
     },
