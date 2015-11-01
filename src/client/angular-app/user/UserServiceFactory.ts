@@ -1,6 +1,4 @@
-import {IUser} from "./IUser";
-
-export class UserService {
+export class UserServiceFactory {
 	public static users:IUser[] = [
 		{
 			name: 'Lia Lugo',
@@ -34,14 +32,14 @@ export class UserService {
 		}
 	];
 	
-	public static Factory ($q:any, $log:any) {
+	public static create ($q:angular.IQService, $log:IEnhancedLogger) {
 		let log = $log.getInstance( "UserService" );
 		log.debug("instanceOf()");	
 		return {
 			loadAll: () => {
 				log.debug("loadAll()");
 				// Simulate async nature of real remote calls
-				return $q.when(UserService.users);
+				return $q.when(UserServiceFactory.users);
 			}
 		}
 	}

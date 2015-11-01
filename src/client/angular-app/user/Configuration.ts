@@ -1,11 +1,11 @@
-import {ExternalLogger} from "../misc/LogDecorator";
+import {ExternalLogger} from "../misc/LogUtils";
 export class Configuration {
 	public static URL_AVATAR_ICONS:string = '/assets/angular-app/svg/avatars.svg';
 	public static URL_ICON_MENU:string = '/assets/angular-app/svg/menu.svg'; 
 	public static URL_ICON_SHARE:string = '/assets/angular-app/svg/share.svg'; 
 
 	public static apply ($mdIconProvider) {
-		let log = ExternalLogger();
+		let log = new ExternalLogger();
     	log = log.getInstance( "BOOTSTRAP" );
     	log.debug( "Configuring 'user' module" );
 		

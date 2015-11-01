@@ -5,7 +5,12 @@ export class BrowseUsersController {
 	public selected:any;
 	public users=[];
 	
-	constructor(public userService:any, public mdSidenav:any, public mdBottomSheet:any, public log) {
+	constructor(
+		public userService:IUserService, 
+		public mdSidenav:angular.material.ISidenavService, 
+		public mdBottomSheet:angular.material.IBottomSheetService, 
+		public log:IEnhancedLogger
+	) {
 		userService.loadAll().then(
 			(users) => {
 				this.users = [].concat(users);

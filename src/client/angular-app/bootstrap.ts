@@ -1,14 +1,12 @@
-import {element} from "angular";
-import { App } from './App';
-import { LogDecorator, ExternalLogger } from './misc/LogDecorator';
-
-element(document).ready(initApp);
-
-function initApp() {
-	let $log = ExternalLogger();
-	$log = $log.getInstance("BOOTSTRAP");
-	$log.debug("Initializing '{0}'", [App.name]); 
-	let body = document.getElementsByTagName("body")[0];
-	App.config(["$provide", LogDecorator]);
-	angular.bootstrap(body, [App.name], {strictDi: false});
-}
+import "angular-app-assets/app.css!";
+import material from "angular-material";
+import { Application } from './Application';
+import {versionComponentPromise} from "./core/version/version";
+import {userComponentPromise} from "./user/UserRegister";
+let APP_NAME="angular-app";
+let app = new Application(APP_NAME);
+app
+	.requires(material)
+	.requires(versionComponentPromise.fqnName)
+	.requires(userComponentPromise.fqnName)
+	.run();

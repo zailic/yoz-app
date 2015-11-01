@@ -1,13 +1,11 @@
-import {IUser} from "./IUser";
-import {IUserSheetItem} from "./IUserSheetItem";
 /**
 * Bottom Sheet controller for the Avatar Actions
 */
 export class UserSheetController {
 	
-	public static $inject=["$mdBottomSheet", "$log"];
+	public static $inject:string[]=["$mdBottomSheet", "$log"];
 	
-	public static selectedUser:any;
+	public static selectedUser:IUser;
 	
 	public sheetItems:IUserSheetItem[];
 	
@@ -20,7 +18,7 @@ export class UserSheetController {
 		{ name: 'Hangout'     , icon: 'hangouts'    , iconUrl: '/assets/angular-app/svg/hangouts.svg'}
 	];
 	
-	constructor(public $mdBottomSheet:any, public log:any) {
+	constructor(public $mdBottomSheet:angular.material.IBottomSheetService, public log:IEnhancedLogger) {
 		this.init();
 	}
 	
