@@ -1,21 +1,20 @@
 export default supplant;
 
-
 /**
  * @author      Thomas Burleson
  * @date        November, 2013
  * @description
  * @see https://raw.githubusercontent.com/angular/material-start/es6/app/src/utils/supplant.js
  */
-function supplant( template, values, pattern ) {
+function supplant( template:string, values:any[], pattern?:RegExp ):string {
     pattern = pattern || /\{([^\{\}]*)\}/g;
 
-    return template.replace(pattern, function(a, b) {
-        var p = b.split('.'),
-            r = values;
+    return template.replace(pattern, function(a:string, b:string):string {
+        let p = b.split('.'),
+            r:string;
 
         try {
-            for (var s in p) { r = r[p[s]];  }
+            for (let s in p) { r = values[p[s]];  }
         } catch(e){
             r = a;
         }
@@ -23,7 +22,6 @@ function supplant( template, values, pattern ) {
         return (typeof r === 'string' || typeof r === 'number') ? r : a;
     });
 }
-
 
 // supplant() method from Crockfords `Remedial Javascript`
 Function.prototype.method = function (name, func) {
