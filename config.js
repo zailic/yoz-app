@@ -11,6 +11,7 @@ System.config({
   "map": {
     "angular": "npm:angular@1.4.7",
     "angular-material": "github:angular/bower-material@0.11.4",
+    "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "angular2": "npm:angular2@2.0.0-alpha.45",
     "assert": "npm:assert@1.3.0",
     "css": "github:systemjs/plugin-css@0.1.19",
@@ -18,10 +19,14 @@ System.config({
     "http": "github:jspm/nodelibs-http@1.7.1",
     "jade": "github:johnsoftek/plugin-jade@0.5.1",
     "kerberos": "npm:kerberos@0.0.15",
+    "lodash": "npm:lodash@3.10.1",
     "mongodb": "npm:mongodb@2.0.47",
     "traceur": "github:jmcriffey/bower-traceur@0.0.90",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.90",
     "typescript": "github:mhegazy/typescript@v1.5-beta2",
+    "github:angular-ui/ui-router@0.2.15": {
+      "angular": "github:angular/bower-angular@1.4.7"
+    },
     "github:angular/bower-angular-animate@1.4.7": {
       "angular": "github:angular/bower-angular@1.4.7"
     },
@@ -457,6 +462,9 @@ System.config({
       "nan": "npm:nan@2.0.9",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:lodash@3.10.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:miller-rabin@2.0.1": {
       "bn.js": "npm:bn.js@2.2.0",

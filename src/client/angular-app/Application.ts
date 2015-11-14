@@ -41,8 +41,8 @@ class Application {
 		element(document).ready( () => {
 			this.log.debug("Bootstraping '{0}'", [this.name]); 
 			this.ngApp = module(this.name, this.dependencyQueue);
-			this.ngApp.controller("MainCtrl", MainController);
-			this.ngApp.config(["$provide", LogDecorator]);
+			//this.ngApp.controller("MainCtrl", MainController);
+			//this.ngApp.config(["$provide", LogDecorator]);
 			angular.bootstrap(document, [this.name], {strictDi: false});	
 		});	
 	}

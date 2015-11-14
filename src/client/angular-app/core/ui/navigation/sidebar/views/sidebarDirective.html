@@ -1,0 +1,37 @@
+<md-sidenav flex class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+
+	<header class="nav-header">
+		<a ng-href="/" class="docs-logo">
+			<img src="/assets/angular-app/icons/app-logo.png" alt="App Logo" />
+			<h1 class="docs-logotype md-heading">Angular App</h1>
+		</a>
+	</header>
+
+	<ul class="skip-links">
+		<li class="md-whiteframe-z2">
+			<md-button ng-click="focusMainContent($event)" href="#">Skip to content</md-button>
+		</li>
+	</ul>
+
+	<md-content flex role="navigation">
+		<ul class="docs-menu">
+			<li ng-repeat="section in sections" class="parent-list-item {{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}">
+				
+				<h2 class="menu-heading md-subhead" ng-if="section.type === 1" id="heading_{{ section.name | nospace | lowercase }}">
+            		{{section.name}}
+          		</h2>
+				  
+				<link-menu section="section" ng-if="section.type === 3"></link-menu>
+
+				<toggle-menu section="section" ng-if="section.type === 2"></toggle-menu>
+
+				<ul ng-if="section.children" class="menu-nested-list">
+					<li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}">
+						<link-menu section="child" ng-if="child.type === 3"></menu-link>
+						<toggle-menu section="child" ng-if="child.type === 3"></toggle-menu>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</md-content>
+</md-sidenav>
